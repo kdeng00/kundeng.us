@@ -1,7 +1,9 @@
 from django.shortcuts import render
 
 def homepage(request):
-    return render(request, 'homepage.html')
+    title = 'Kun Deng'
+    return render(request, 'homepage.html', {'title':title})
 
 def contact(request):
-    return render(request, 'contact.html')
+    title = 'Kun Deng - Contact'
+    return render(request, 'contact.html', {'title':title})
