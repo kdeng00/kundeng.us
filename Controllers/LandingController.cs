@@ -11,21 +11,22 @@ using KunDengWebsite.Models;
 
 namespace KunDengWebsite.Controllers
 {
-    public class LandingController : Controller
-    {
-        public IActionResult Index()
-        {
-            return View();
-        }
+    	public class LandingController : Controller
+    	{
+        	public IActionResult Index()
+        	{
+        	    return View();
+        	}
 
 		public IActionResult Development()
 		{
+			ProjectManager prgMgr = new ProjectManager();
+			List<Project> projects = prgMgr.RetrieveDevelopmentProjects();
+
 			IcarusInformation soar = new IcarusInformation();
 
+			ViewData["Projects"] = projects;
 			ViewData["Header"] = "Development Projects";
-			ViewData["Icarus"] = "Icarus";
-			ViewData["IcarusDescription"] = soar.Description;
-			ViewData["IcarusTechnologies"] = soar.Technologies;
 
 			return View();
 		}
@@ -35,9 +36,9 @@ namespace KunDengWebsite.Controllers
 			return View();
 		}
 
-        public IActionResult Contact()
-        {
-            return View();
-        }
-    }
+        	public IActionResult Contact()
+        	{
+            		return View();
+        	}
+    	}
 }

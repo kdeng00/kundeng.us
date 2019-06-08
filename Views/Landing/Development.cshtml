@@ -7,24 +7,29 @@
 
 <div class="container shadow-sm bg-white justify-content-center">
 	<h1 class="display-1 text-dark text-center">@ViewData["Header"]</h1>
+	<br>
 </div>
+	<br>
 
 <div class="container shadow-sm bg-white justify-content-center">
-	<h3 class="display-3 text-dark text-left">@ViewData["Icarus"]</h3>
-	<p class="lead text-dark text-left">@ViewData["IcarusDescription"] </p>
-	<ul class="list-group">
-	@foreach(var tech in ViewData["IcarusTechnologies"] as List<string>)
+	@foreach(Project project in ViewData["Projects"] as List<Project>)
 	{
-		<li class="list-group-item">@tech</li>
+		<h3 class="display-3 text-dark text-left">@project.Title</h3>
+		<p class="lead text-dark text-left">@project.Description</p>
+		<ul class="list-group">
+		@foreach(var tech in @project.DevelopmentTools as List<string>)
+		{
+			<li class="list-group-item">@tech</li>
+		}
+		</ul>
+		@if(project.Title == "Icarus")
+		{
+			<a width="150" height="50" href="https://auth0.com/?utm_source=oss&utm_medium=gp&utm_campaign=oss" 
+				target="_blank" alt="Single Sign On & Token Based Authentication - Auth0"><img width="150" 
+				height="50" alt="JWT Auth for open source projects" src="//cdn.auth0.com/oss/badges/a0-badge-dark.png"/></a>
+		}
+		<br>
+		<br>
+		<br>
 	}
-	</ul>
-	<a width="150" height="50" href="https://auth0.com/?utm_source=oss&utm_medium=gp&utm_campaign=oss" 
-		target="_blank" alt="Single Sign On & Token Based Authentication - Auth0"><img width="150" 
-		height="50" alt="JWT Auth for open source projects" src="//cdn.auth0.com/oss/badges/a0-badge-dark.png"/></a>
-	<br>
-	<br>
-</div>
-<br>
-<div class="container shadow-sm bg-white justify-content-center" style="visibility:hidden">
-	<h3 class="display-3 text-dark text-left">Mear</h3>
 </div>
