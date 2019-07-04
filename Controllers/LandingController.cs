@@ -11,34 +11,34 @@ using KunDengWebsite.Models;
 
 namespace KunDengWebsite.Controllers
 {
-    	public class LandingController : Controller
-    	{
-        	public IActionResult Index()
-        	{
-        	    return View();
-        	}
+    public class LandingController : Controller
+    {
+       	public IActionResult Index()
+       	{
+       	    return View();
+       	}
 
-		public IActionResult Development()
-		{
-			ProjectManager prgMgr = new ProjectManager();
-			List<Project> projects = prgMgr.RetrieveDevelopmentProjects();
+	public IActionResult Development()
+	{
+	    ProjectManager prgMgr = new ProjectManager();
+	    List<Project> projects = prgMgr.RetrieveDevelopmentProjects();
 
-			IcarusInformation soar = new IcarusInformation();
+	    IcarusInformation soar = new IcarusInformation();
+	    
+	    ViewData["Projects"] = projects;
+    	    ViewData["Header"] = "Development Projects";
 
-			ViewData["Projects"] = projects;
-			ViewData["Header"] = "Development Projects";
+    	    return View();
+	}
 
-			return View();
-		}
+	public IActionResult Music()
+	{
+	    return View();
+	}
 
-		public IActionResult Music()
-		{
-			return View();
-		}
-
-        	public IActionResult Contact()
-        	{
-            		return View();
-        	}
-    	}
+       	public IActionResult Contact()
+       	{
+     	    return View();
+       	}
+    }
 }

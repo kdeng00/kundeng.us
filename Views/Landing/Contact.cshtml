@@ -1,24 +1,24 @@
 @{
-	ViewData["Title"] = "Contact";
+  ViewData["Title"] = "Contact";
 }
 @{
-	Layout = "_PersonalLayout";
+  Layout = "_PersonalLayout";
 }
+@model KunDengWebsite.Models.EmailMessage
 
 <div class="container shadow-sm bg-white justify-content-center">
-	<br>
-	<form>
-		<div class="form-group">
-			<label for="emailinput">Email Address</label>
-			<input type="email" class="form-control" id="emailinput" placeholder="Email address" />
-		</div>
-		<div class="form-group">
-			<label for="message">Message</label>
-			<textarea class="form-control" rows="6" placeholder="Message"></textarea>
-		</div>
+  <br>
+  <form asp-action="SendEmail" asp-controller="SendEmail">
+    <div class="form-group">
+      <label asp-for="FromEmail">Email Address</label>
+      <input type="email" class="form-control" asp-for="FromEmail" placeholder="Email address" />
+    </div>
+    <div class="form-group">
+      <label asp-for="Message">Message</label>
+      <textarea class="form-control" asp-for="Message" rows="6" placeholder="Message"></textarea>
+    </div>
 
-		<button type="submit" class="btn btn-primary">Submit</button>
-		<br>
-		<br>
-	</form>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br> <br>
+  </form>
 </div>
