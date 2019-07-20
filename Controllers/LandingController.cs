@@ -18,23 +18,23 @@ namespace KunDengWebsite.Controllers
        	    return View();
        	}
 
-	public IActionResult Development()
-	{
-	    ProjectManager prgMgr = new ProjectManager();
-	    List<Project> projects = prgMgr.RetrieveDevelopmentProjects();
-
-	    IcarusInformation soar = new IcarusInformation();
+        public IActionResult Development()
+        {
+            ProjectManager prgMgr = new ProjectManager();
+            List<Project> projects = prgMgr.RetrieveDevelopmentProjects();
 	    
-	    ViewData["Projects"] = projects;
+            IcarusInformation soar = new IcarusInformation();
+	    
+            ViewData["Projects"] = projects;
     	    ViewData["Header"] = "Development Projects";
 
     	    return View();
-	}
-
-	public IActionResult Music()
-	{
-	    return View();
-	}
+        }
+	
+        public IActionResult Music()
+        {
+            return View();
+        }
 
        	public IActionResult Contact()
        	{
