@@ -7,7 +7,7 @@ Casually start making your own website. No rush and no deadlines
 
 ## Required
 * Python >= 3.6.9
-* Django >= 3.0.6
+* Django >= 3.0.7
 * Pip3 >= 20.1
 * Virtualenv >= 15.1.0
 
