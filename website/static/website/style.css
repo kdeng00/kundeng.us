@@ -10,3 +10,15 @@ body {
   width: 100%;
   text-align: center;
 }
+
+.center-some-text {
+  text-align: center;
+}
+
+.header-topped {
+  margin-top: 50px;
+}
+
+.get-off-my-neck {
+  margin-top: 100px;
+}

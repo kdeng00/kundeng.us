@@ -14,11 +14,19 @@ Casually start making your own website. No rush and no deadlines
 
 ## Running
 1. Clone repo
-```Bash git clone https://github.com/kdeng00/kundeng.us```
+```Bash 
+git clone https://github.com/kdeng00/kundeng.us
+```
 2. Change directories to the cloned repository
 3. Create virtual environment and then activate the environment
-```Bash virtualenv . && source bin/activate```
+```Bash
+virtualenv . && source bin/activate
+```
 4. With pip install Django
-```Bash pip3 install -r requirements.txt```
+```
+Bash pip3 install -r requirements.txt
+```
 5. Run server on localhost port 8000
-```Bash python manage.py runserver```
+```Bash
+python manage.py runserver
+```
