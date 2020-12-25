@@ -1,6 +1,24 @@
 
 body {
-  background: #10002e;
+  /* background: #10002e; */
+    animation-name:backgroundColorPalette;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes backgroundColorPalette {
+    0% {
+        /* background: #449bf2; */
+        background: #0000ff;
+    }
+    50% {
+        background: #2904e0;
+    }
+    100% {
+        background: #ff0000;
+    }
 }
 
 .footer {
@@ -21,4 +39,8 @@ body {
 
 .get-off-my-neck {
   margin-top: 100px;
+}
+
+.pad_box {
+  padding-bottom: 20px;
 }
