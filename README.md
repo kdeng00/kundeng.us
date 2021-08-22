@@ -4,6 +4,11 @@
 Casually start making your own website. No rush and no deadlines
 
 
+## Experiment
+
+Try out React. Don't bother updating your python dependencies.
+
+
 
 ## Required
 * Python >= 3.6.9
