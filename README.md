@@ -15,6 +15,8 @@ Try out React. Don't bother updating your python dependencies.
 * Django >= 3.0.7
 * Pip3 >= 20.1
 * Virtualenv >= 15.1.0
+* NodeJs = v16.7.0
+* ReactJs
 
 
 ## Running
@@ -22,21 +24,15 @@ Try out React. Don't bother updating your python dependencies.
 ```Bash 
 git clone https://github.com/kdeng00/kundeng.us
 ```
+
 2. Change directories to the cloned repository
-3. Create virtual environment and then activate the environment
+
+3. Make sure React is installed
 ```Bash
-virtualenv env && source env/bin/activate
+npx install create-react-app
 ```
-4. With pip install Django
-```
-Bash pip3 install -r requirements.txt
-```
-5. Run server on 127.0.0.1 port 8000
+
+4. Start app
 ```Bash
-python manage.py runserver
+npm run
 ```
-To hit the web app via your ip, run like so:
-```Bash
-python manage.py 0.0.0.0:[8000]
-```
-Then open a browser and go to ``http://[your_ip_address]:8000``
