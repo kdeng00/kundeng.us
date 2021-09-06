@@ -11,15 +11,12 @@ Try out React. Don't bother updating your python dependencies.
 
 
 ## Required
-* Python >= 3.6.9
-* Django >= 3.0.7
-* Pip3 >= 20.1
-* Virtualenv >= 15.1.0
 * NodeJs = v16.7.0
-* ReactJs
+* NPM & NPX
+* ReactJS
 
 
-## Running
+## Getting started
 1. Clone repo
 ```Bash 
 git clone https://github.com/kdeng00/kundeng.us
@@ -29,10 +26,11 @@ git clone https://github.com/kdeng00/kundeng.us
 
 3. Make sure React is installed
 ```Bash
-npx install create-react-app
+npx install create-react-app client
 ```
 
 4. Start app
 ```Bash
-npm run
+cd client
+npm start
 ```
