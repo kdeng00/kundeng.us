@@ -27,6 +27,7 @@ git clone https://github.com/kdeng00/kundeng.us
 3. Make sure React is installed
 ```Bash
 npx install create-react-app client
+npm install react-bootstrap bootstrap
 ```
 
 4. Start app
