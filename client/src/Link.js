@@ -1,26 +1,71 @@
 import React from "react";
-import { ButtonGroup } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 // If any, import CSS
+// import styles from './Link.css'
 
+
+function buttonStyling() {
+  const styling = {
+    padding: '20px 50px 20px 50px',
+    margin: '100px 10px 0px 10px'
+  };
+
+  return styling;
+}
+
+
+function linkTypes() {
+  var types = { "Url": 1, "Email": 2};
+
+  return types;
+}
+
+function openLink(someLink, someType) {
+  var myLink = "";
+
+  switch(someType) {
+    case 1:
+      myLink = someLink;
+      break;
+    case 2:
+      myLink = `mailto:${someLink}`;
+      break;
+  }
+
+  window.open(myLink);
+}
 
 function githubButton() {
+  const gitHubLink = "https://github.com/kdeng00";
+  const someType = linkTypes().Url;
+
+  const someChange = (myLink, goodType) => e => {
+    openLink(myLink, goodType);
+  };
+
+ const myStyle = buttonStyling();
+
   return (
-    <a href="https://github.com/kdeng00">
-      <button variant="primary">
-        GitHub
-      </button>
-    </a>
+    <>
+      <Button variant="light" style={myStyle} size="lg" onClick={someChange(gitHubLink, someType)}>GitHub</Button>{' '}
+    </>
   )
 }
 
 function emailButton() {
+  const emailAddress = "kundeng94@gmail.com";
+  const someType = linkTypes().Email;
+
+  const someChange = (myLink, goodType) => e => {
+    openLink(myLink, goodType);
+  };
+
+ const myStyle = buttonStyling();
+
   return (
-    <a href="mailto:kundeng94@gmail.com">
-      <button variant="primary">
-        Email
-      </button>
-    </a>
+    <>
+      <Button variant="light" style={myStyle} size="lg" onClick={someChange(emailAddress, someType)}>Email</Button>{' '}
+    </>
   )
 }
 
@@ -31,10 +76,10 @@ const Link = () => {
 
   return (
     <>
-      <ButtonGroup>
+      <div className="mb-2">
         {github}
         {email}
-      </ButtonGroup>
+      </div>
     </>
   );
 };
